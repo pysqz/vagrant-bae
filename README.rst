@@ -50,4 +50,4 @@ Playing with BAE3.0
     ### 使用host机器浏览器访问
     127.0.0.1:10080
 
-.. _http://developer.baidu.com/events/bae3
+.. _BAE3.0http://developer.baidu.com/events/bae3
