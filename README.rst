@@ -16,7 +16,7 @@ Launch a virtual server
 -----
 ::
 
-    git clone git@github.com:pysqz/vagrant-bae.git
+    git clone https://github.com/pysqz/vagrant-bae.git
     cd vagrant-bae
     vagrant up
 
