@@ -3,8 +3,8 @@ VAGRANT-BAE
 
 Overview
 --------
-vagrant-bae是一个借助虚拟化创建工具vagrant构造的包含BAE3.0_执行单元本地模拟的Ubuntu (12.04.2 LTS)虚拟机环境，
-它用于部署与BAE3.0线上同构的执行环境，便于开发者在本地调试、运行代码。
+vagrant-bae是一个借助虚拟化创建工具vagrant构造的包含BAE3.0_ 执行单元本地模拟的Ubuntu (12.04.2 LTS)虚拟机环境，
+它用于部署与BAE3.0_ 线上同构的执行环境，便于开发者在本地调试、运行代码。
 
 Installation
 -------------
@@ -21,7 +21,7 @@ Launch a virtual server
     vagrant up
 
 Log onto your Ubuntu server
----
+----
 ::
 
     ### 使用vagrant子命令
@@ -31,16 +31,19 @@ Log onto your Ubuntu server
     ssh root@127.0.0.1 -p 10022
 
 Playing with BAE3.0
----
+----
 *以php应用为例
 ::
 
     svn co https://svn.duapp.com/${your_appid} /home/app/php-app/
+
     cd /home/admin/php-runtime
+
     ./build.sh
+
     ./run.sh start
+
     ### BAE3.0的php-web模拟环境已经启动
-    
     ### 使用curl命令，访问应用，调试代码
     curl 127.0.0.1:8080
 
