@@ -8,12 +8,14 @@ vagrant-bae是一个借助虚拟化创建工具vagrant构造的包含 BAE3_ 执行单元本地模拟的Ubu
 
 Installation
 -------------
-1. 安装 virtualbox https://www.virtualbox.org 
-2. 安装 vagrant http://www.vagrantup.com 
-3. 安装 git http://git-scm.com/downloads 或者(for windows) http://msysgit.github.io/
+1. 安装 virtualbox https://www.virtualbox.org，详细过程参见官网文档
+2. 安装 vagrant http://www.vagrantup.com，详细过程参见官网文档
+3. 安装 git http://git-scm.com/downloads 或者(for windows) http://msysgit.github.io/ 
 
-Launch a virtual server 
+Usage
 -----
+Launch a virtual server 
++++++++++++++++++++++++
 ::
 
     git clone https://github.com/pysqz/vagrant-bae.git
@@ -21,7 +23,7 @@ Launch a virtual server
     vagrant up
 
 Log onto your Ubuntu server
-----
++++++++++++++++++++++++++++
 ::
 
     ### 使用vagrant子命令
@@ -31,11 +33,11 @@ Log onto your Ubuntu server
     ssh root@127.0.0.1 -p 10022
 
 Playing with BAE3.0
-----
++++++++++++++++++++
 *以php应用为例*
 ::
 
-    svn co https://svn.duapp.com/${your_appid} /home/app/php-app/
+    svn co https://svn.duapp.com/${your_appid} /home/bae/php-app/
 
     cd /home/admin/php-runtime
 
