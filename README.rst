@@ -74,7 +74,7 @@ Note
 1. 因创建64bit虚拟机，故需开启计算机中VT属性。一般操作为BIOS > Security > OS Security > Intel Virtualization Technology(ENABLE)
 2. 确保你的环境中ssh可使用，详见 http://www.openssh.org/
 3. 确保你的环境中系统盘或根目录有2G空闲，若virtualbox使用的虚拟介质也存储在系统盘或根目录，则至少需要4G空闲
-4. 执行"vagrant up"后在提示"Waiting for VM to boot. This can take a few minutes."处卡住的情况，可参看https://github.com/mitchellh/vagrant/issues/455，强力处理方法为在virtualbox中手动重启虚拟机。
+4. 执行"vagrant up"后在提示"Waiting for VM to boot. This can take a few minutes."处卡住的情况，可参看 https://github.com/mitchellh/vagrant/issues/455 ，强力处理方法为在virtualbox中手动重启虚拟机。
 
 .. _BAE3: http://developer.baidu.com/events/bae3
 .. _cli: http://godbae.duapp.com/?p=338
