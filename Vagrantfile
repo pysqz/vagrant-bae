@@ -11,7 +11,7 @@ Vagrant.configure("2") do |config|
 
   # The url from where the 'config.vm.box' box will be fetched if it
   # doesn't already exist on the user's system.
-  config.vm.box_url = "http://bcs.duapp.com/baev3runtime/0910.box"
+  config.vm.box_url = "http://bcs.duapp.com/baev3runtime/0916.box"
 
   # Create a forwarded port mapping which allows access to a specific port
   # within the machine from a port on the host machine. In the example below,
@@ -19,6 +19,8 @@ Vagrant.configure("2") do |config|
   config.vm.network :forwarded_port, guest: 22, host: 10022
   config.vm.network :forwarded_port, guest: 8080, host: 10080
 
+  #config.ssh.username = "root"
+  config.ssh.max_tries = 150
   # Create a private network, which allows host-only access to the machine
   # using a specific IP.
   # config.vm.network :private_network, ip: "192.168.33.10"
