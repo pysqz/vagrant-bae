@@ -27,7 +27,7 @@ Log onto your Ubuntu server
 +++++++++++++++++++++++++++
 ::
  
-    ### 使用vagrant子命令 (username:root, password:vagrant)
+    ### 使用vagrant子命令，默认用户为vagrant，建议开发者切换到root操作
     vagrant ssh
 
     ### 或者直接使用ssh (username:root, password:vagrant)
