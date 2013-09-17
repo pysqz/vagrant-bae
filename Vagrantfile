@@ -20,7 +20,7 @@ Vagrant.configure("2") do |config|
   config.vm.network :forwarded_port, guest: 8080, host: 10080
 
   #config.ssh.username = "root"
-  config.ssh.max_tries = 150
+  #config.ssh.max_tries = 150
   # Create a private network, which allows host-only access to the machine
   # using a specific IP.
   # config.vm.network :private_network, ip: "192.168.33.10"
