@@ -23,6 +23,14 @@ Launch a virtual server
     cd vagrant-bae
     vagrant up
 
+    ### 注：若在up过程中，由于网络等问题，镜像下载中断。可遵循以下步骤操作启动虚拟机
+    ### 1. 手动下载Vagrantfile中"config.vm.box_url"指定的box
+    ### 2. 修改Vagrantfile中"config.vm.box_url"配置项为已下载box的存放路径，如: 
+    ###    config.vm.box_url = "file://D:/path/to/vm.box" (windows)
+    ###    或者 config.vm.box_url = "file:///root/path/to/vm.box" (*nix)
+    ### 3. 再次使用vagrant up
+
+
 Log onto your Ubuntu server
 +++++++++++++++++++++++++++
 ::
