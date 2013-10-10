@@ -75,7 +75,7 @@ Playing with BAE3.0
     bae instance start --local
     bae instance stop --local
 
-    ### 上述 cli_ 命令详细介绍请参看 http://godbae.duapp.com/?p=338
+    ### 上述cli命令详细介绍请参看 http://godbae.duapp.com/?p=338
 
 Note
 ----
