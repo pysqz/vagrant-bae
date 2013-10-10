@@ -7,11 +7,27 @@ Vagrant.configure("2") do |config|
   # please see the online documentation at vagrantup.com.
 
   # Every Vagrant virtual environment requires a box to build off of.
+  vagrant_bae_version = "1.0.0"
+  begin
+    require "open-uri"
+    open("http://bcs.duapp.com/baev3runtime/version") {|file|
+      online_version = file.read()
+      if online_version =~ /\d\.\d\.\d/
+        online_maj, online_min, _ = online_version.split(".") 
+	local_maj, local_min, _ = vagrant_bae_version.split(".")
+        if local_maj != online_maj or local_min != online_min
+	  puts "!!! [BAE] Please update your vagrant-bae, the latest version is #{online_version}. !!!"	
+        end
+      end
+    }
+  rescue
+       puts "!!! [BAE] Failed to automatic check your vagrantfile. Please make sure you use the latest version. !!!"
+  end       
   config.vm.box = "vagrant-bae"
 
   # The url from where the 'config.vm.box' box will be fetched if it
   # doesn't already exist on the user's system.
-  config.vm.box_url = "http://bcs.duapp.com/baev3runtime/0916.box"
+  config.vm.box_url = "http://bcs.duapp.com/baev3runtime/1010.box"
 
   # Create a forwarded port mapping which allows access to a specific port
   # within the machine from a port on the host machine. In the example below,
@@ -20,7 +36,6 @@ Vagrant.configure("2") do |config|
   config.vm.network :forwarded_port, guest: 8080, host: 10080
 
   #config.ssh.username = "root"
-  #config.ssh.max_tries = 150
   # Create a private network, which allows host-only access to the machine
   # using a specific IP.
   # config.vm.network :private_network, ip: "192.168.33.10"
