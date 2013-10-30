@@ -7,7 +7,7 @@ Vagrant.configure("2") do |config|
   # please see the online documentation at vagrantup.com.
 
   # Every Vagrant virtual environment requires a box to build off of.
-  vagrant_bae_version = "1.0.0"
+  vagrant_bae_version = "1.1.0"
   begin
     require "open-uri"
     open("http://bcs.duapp.com/baev3runtime/version") {|file|
@@ -23,11 +23,11 @@ Vagrant.configure("2") do |config|
   rescue
        puts "!!! [BAE] Failed to automatic check your vagrantfile. Please make sure you use the latest version. !!!"
   end       
-  config.vm.box = "vagrant-bae"
+  config.vm.box = "vagrant-bae-1-1-0"
 
   # The url from where the 'config.vm.box' box will be fetched if it
   # doesn't already exist on the user's system.
-  config.vm.box_url = "http://bcs.duapp.com/baev3runtime/1010.box"
+  config.vm.box_url = "http://bcs.duapp.com/baev3runtime/1029.box"
 
   # Create a forwarded port mapping which allows access to a specific port
   # within the machine from a port on the host machine. In the example below,

@@ -63,12 +63,16 @@ Playing with BAE3.0
     curl 127.0.0.1:8080 -H "Host: $app_domain"
     ###### java应用直接指定对应的war包名(root.war直接通过/访问)
     curl 127.0.0.1:8080/$war_name/
+    ###### nodejs应用直接访问8080端口
+    curl 127.0.0.1:8080
 
     ### 2.宿主机中使用浏览器访问
     ###### php或python可修改系统hosts文件，将127.0.0.1配为指定的应用域名
     app_domain:10080
     ###### java应用同样指定对应的war包名(root.war直接通过/访问)
     127.0.0.1:10080/$war_name/
+    ###### nodejs应用直接输入10080端口访问
+    127.0.0.1:10080
 
     ### 另开发者可执行对本地环境后端server的控制
     bae instance restart --local
