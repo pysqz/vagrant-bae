@@ -8,13 +8,21 @@ vagrant-bae是一个借助虚拟化创建工具vagrant构造的包含 BAE3_ 执行单元本地模拟的Ubu
 
 Installation
 -------------
-1. 安装 virtualbox https://www.virtualbox.org，详细过程参见官网文档
+1. 安装 virtualbox https://www.virtualbox.org，详细过程参见官网文档，推荐版本4.2.4
 2. 安装 vagrant http://www.vagrantup.com，详细过程参见官网文档，推荐版本>=1.2.2
 3. 安装 git http://git-scm.com/downloads 或者(for windows) http://msysgit.github.io/ 
 
 
 Usage
 -----
+More types supported
+++++++++++++++++++++
+为了方便用户使用，加快虚拟机镜像的下载速度。新进增加了两个满足不同需求的虚拟机环境，包括mini(精简版)，langtype(多语言类型版)。其中精简版中省去了一些基础库和软件；
+多语言类型版中开发者可以根据线上应用的语言类型自己定制虚拟机环境。
+在使用上，需注意一下两点：
+1.启动前，将Vagrantfile-mini或Vagrantfile-langtype重命名为Vagrantfile 
+2.启动后，登入虚拟机内在/home/vagrant/目录下找到postinstall.sh，按帮助执行脚本可搭建出完整的虚拟机环境(多语言类型版中可指定语言类型，只创建该语言类型需要的基础环境)
+
 Launch a virtual server 
 +++++++++++++++++++++++
 ::
