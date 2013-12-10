@@ -22,10 +22,7 @@ More types supported
 在使用上，需注意以下两点：
 
 1. 启动前，将Vagrantfile-mini或Vagrantfile-langtype重命名为Vagrantfile
-
-2. 启动后，登入虚拟机内在/home/vagrant/目录下找到postinstall.sh，按帮助执行脚本可搭建出完整的虚拟机环境。
-（另精简版中若开发者只调试简单应用(如不依赖一些第三方模块等)，可以忽略postinstall这步操作；多语言类型版中可指定语言类型，
-只创建该语言类型需要的基础环境，如./postinstall.sh python 安装python应用调试的最简环境；./postinstall.sh python+ 安装python应用调试的完整环境）
+2. 启动后，登入虚拟机内在/home/vagrant/目录下找到postinstall.sh，按帮助执行脚本可搭建出完整的虚拟机环境。（另精简版中若开发者只调试简单应用(如不依赖一些第三方模块等)，可以忽略postinstall这步操作；多语言类型版中可指定语言类型，只创建该语言类型需要的基础环境，如./postinstall.sh python 安装python应用调试的最简环境；./postinstall.sh python+ 安装python应用调试的完整环境）
 
 Launch a virtual server 
 +++++++++++++++++++++++
