@@ -27,7 +27,12 @@ Vagrant.configure("2") do |config|
 
   # The url from where the 'config.vm.box' box will be fetched if it
   # doesn't already exist on the user's system.
-  config.vm.box_url = "http://bcs.duapp.com/baev3runtime/1029.box"
+  config.vm.box_url = "http://bcs.duapp.com/baev3runtime/bae-v1.box"
+
+  ### for different lang types: php python java nodejs
+  #script = "cd /home/vagrant; " \
+  #	   "./postinstall.sh <langs>; " 
+  #config.vm.provision :shell, :inline => script
 
   # Create a forwarded port mapping which allows access to a specific port
   # within the machine from a port on the host machine. In the example below,
